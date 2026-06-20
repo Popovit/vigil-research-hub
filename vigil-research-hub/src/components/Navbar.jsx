@@ -12,16 +12,16 @@ export default function Navbar() {
           <span className="brand-dot"></span> Vigil Research Hub
         </Link>
         <div className="nav-links">
-          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Търсене</Link>
-          <Link to="/saved" className={`nav-link ${location.pathname === '/saved' ? 'active' : ''}`}>Запазени</Link>
+          <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Search</Link>
+          <Link to="/saved" className={`nav-link ${location.pathname === '/saved' ? 'active' : ''}`}>Saved</Link>
         </div>
         {user ? (
           <div className="flex gap-12">
             <span className="muted" style={{ fontSize: 12 }}>{user.email}</span>
-            <button className="btn btn-sm" onClick={signOut}>Изход</button>
+            <button className="btn btn-sm" onClick={signOut}>Sign out</button>
           </div>
         ) : (
-          <Link to="/auth" className="btn btn-sm btn-primary">Вход</Link>
+          <Link to="/auth" className="btn btn-sm btn-primary">Sign in</Link>
         )}
       </div>
     </div>
